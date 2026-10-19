@@ -1,0 +1,22 @@
+html, body, div, span, h1, h2, h3, p, a, address, img, small,
+article, aside, footer, header, main, nav, section, iframe, li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, footer, header, main, nav, section {
+  display: block;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+img, iframe {
+  display: block;
+  max-width: 100%;
+}

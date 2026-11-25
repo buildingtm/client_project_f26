@@ -7,14 +7,15 @@
 
     <link rel="stylesheet" href="css/html5reset.css">
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
-
     <header>
   <a href = "#main">Skip to Main Content</a>
         <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
         <nav aria-label="Main">
-          <ul>
+          <button type="button" aria-expanded="false" aria-controls="menu" aria-label="menu">☰</button>  <!-- https://www.youtube.com/watch?v=pBv7igaxfQE helped me make the hamburger menu and make it accessible-->
+          <ul id="menu">
               <li><a href="index.html" aria-current="page">Home</a></li>
               <li><a href="preparing.html">Preparing for Your Experience</a></li>
               <li><a href="starting.html">Starting Your Experience</a></li>
@@ -49,7 +50,7 @@
     </ul>
 </section>
 
- <section>
+ <section class="guidance">
     <h2>Guidance for Every Stage</h2>
     <p>Engaged learning projects can change as new needs, constraints, and insights emerge. Find guidance for the stage of work you are navigating <strong>now.</strong></p>
     <article>
@@ -127,7 +128,8 @@
       <address>
         <a href="mailto:umsi.engagement@umich.edu">umsi.engagement@umich.edu</a>
       </address>
-      <p>&copy; 2026 Regents of the University of Michigan</p>
+      <p>&copy; <span id="year"></span> Regents of the University of Michigan</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

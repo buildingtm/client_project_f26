@@ -255,9 +255,122 @@ footer a:focus {
   outline-color: #FFCB05;
 }
 
+#menu {
+  display: none;
+}
+#menu.open {
+  display: grid;
+}
+button {
+  color: #ffffff;
+  background-color: #00274C;
+  min-height: 3rem;
+  width: 10%;
+  border: solid white;
+}
+button:hover {
+  color:  #00274C;
+  background-color:#FFCB05;
+  border: solid white;
+}
 @media (prefers-reduced-motion: reduce) {
   * {
     animation: none;
     transition: none;
   }
+}
+
+@media (min-width: 800px ) {
+  nav ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  h1 {
+    font-size: 35px;
+  }
+  main section:first-of-type {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-content: start;
+    grid-template-rows: auto 1fr;
+  }
+  main section:first-of-type img {
+    grid-row: 1 / span 2;
+    grid-column: 2;
+    margin: 0;
+  }
+  main section:first-of-type iframe {
+    grid-row: 1 / span 2;
+    grid-column: 2;
+    margin: 0;
+  }
+  .programs > h2 {
+    grid-column: 1 / -1; /*found this trick on css-tricks.com */
+  }
+  .programs > p {
+    grid-column: 1 / -1;
+  }
+    .programs {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .twocollumn {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+      .twocollumn > h2 {
+        grid-column: 1 / -1;
+      }
+      .twocollumn > h3 {
+        grid-column: 1 / -1; 
+      }
+      .twocollumn > p {
+        grid-column: 1 / -1;
+      }
+      header {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        background: #00274C;
+        align-items: center;
+      }
+      header > h1{
+        grid-column: 1 / -1;
+      }
+      h1 {
+        color: white;
+      }
+      footer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+      }
+      #menu {
+        display: grid;
+      }
+      button {
+        display: none;
+      }
+}
+
+@media (min-width: 1000px ) {
+  h1 {
+    font-size: 40px;
+  }
+  .guidance {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .guidance > h2 {
+    grid-column: 1 / -1;
+  }
+  .guidance > p {
+    grid-column: 1 / -1;
+  }
+  .twocollumn {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.squirrel {
+  width: 200px;
 }

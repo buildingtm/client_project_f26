@@ -6,15 +6,16 @@
     <title>Preparing for Your Experience | UMSI</title>
     <link rel="stylesheet" href="css/html5reset.css">
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
-
     <header>
 
   <a href = "#main">Skip to Main Content</a>
         <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
         <nav aria-label="Main">
-          <ul>
+          <button type="button" aria-expanded="false" aria-controls="menu" aria-label="menu">☰</button>  <!-- https://www.youtube.com/watch?v=pBv7igaxfQE helped me make the hamburger menu and make it accessible-->
+          <ul id="menu">
               <li><a href="index.html">Home</a></li>
               <li><a href="preparing.html" aria-current="page">Preparing for Your Experience</a></li>
               <li><a href="starting.html">Starting Your Experience</a></li>
@@ -39,7 +40,7 @@
 
 </section>
 
-<section>
+<section class="twocollumn">
   <h2>Phase 1: Preparing for the Experience</h2>
   <p>Before creating a solution, take time to understand the context, evaluate your team's readiness, and identify what you still need to learn.</p>
   <article>
@@ -105,9 +106,9 @@
       <address>
         <a href="mailto:umsi.engagement@umich.edu">umsi.engagement@umich.edu</a>
       </address>
-      <p>&copy; 2026 Regents of the University of Michigan</p>
+      <p>&copy; <span id="year"></span> Regents of the University of Michigan</p>
     </footer>
-    
+    <script src="script.js"></script>
 </body>
 
 </html>

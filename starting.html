@@ -14,7 +14,8 @@
   <a href = "#main">Skip to Main Content</a>
         <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
         <nav aria-label="Main">
-          <ul>
+          <button type="button" aria-expanded="false" aria-controls="menu" aria-label="menu">☰</button>  <!-- https://www.youtube.com/watch?v=pBv7igaxfQE helped me make the hamburger menu and make it accessible-->
+          <ul id="menu">
               <li><a href="index.html">Home</a></li>
               <li><a href="preparing.html">Preparing for Your Experience</a></li>
               <li><a href="starting.html" aria-current="page">Starting Your Experience</a></li>
@@ -32,7 +33,7 @@
   <img src="images/student-movein.png" alt="Students walk with backpacks through a large hall with a vaulted wood ceiling during move-in." width="400">
 </section>
 
-<section>
+<section class="twocollumn">
   <article>
     <h3>Value &amp; Narrative</h3>
     <p>First impressions shape the trajectory of a partnership. The starting phase is where abstract project ideas turn into structured, professional commitments. By establishing clear team contracts, co-creating agendas, and aligning on project scope early, you build psychological safety within your team and trust with your client. Learning how to navigate early ambiguity is one of the most valuable professional capabilities you will gain at UMSI.</p>
@@ -66,7 +67,8 @@
       <address>
         <a href="mailto:umsi.engagement@umich.edu">umsi.engagement@umich.edu</a>
       </address>
-      <p>&copy; 2026 Regents of the University of Michigan</p>
+      <p>&copy; <span id="year"></span> Regents of the University of Michigan</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
